@@ -1,0 +1,1 @@
+`./base64pemkey pemkey.pem`
