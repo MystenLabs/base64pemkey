@@ -8,4 +8,7 @@ edition = "2021"
 [dependencies]
 openssl = "0.10.37"
 base64 = "0.13.0"
-
+#sui = {git = "https://github.com/MystenLabs/sui", rev="299cbeafbb6aa5601e08f00ac24bd647c61a63e2" }
+sui-types = {git = "https://github.com/MystenLabs/sui", rev="299cbeafbb6aa5601e08f00ac24bd647c61a63e2" }
+fastcrypto = { git = "https://github.com/MystenLabs/fastcrypto", rev = "91360ec4a70afb68e3f03fa332b4c7df070476d4" }
+anyhow = "1.0.71"
