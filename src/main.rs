@@ -43,12 +43,8 @@ fn main() -> Result<()> {
     arr.extend_from_slice(&[0x01]);
     arr.extend_from_slice(&public_key_bytes);
 
-    // If `arr` should be base64 encoded, encode it
+    // `arr` needs to be base64 encoded
     let base64_str = encode(&arr);
-
-    // If you need to decode it back into bytes
-    let decoded_bytes =
-        base64::decode(&base64_str).map_err(|e| anyhow!("Failed to decode base64: {:?}", e))?;
 
     // Assuming PublicKey::decode_base64 expects a base64 encoded string
     let pk_owner = PublicKey::decode_base64(&base64_str)
